@@ -1,0 +1,261 @@
+
+/*!   to find :
+- style.css
+- default.css 
+	caso o css principal não funcione
+- error404.css
+- normalize.css
+- theme.css
+- framework.css
+- responsive.css
+- animation.css
+- font.css
+- scrollbar.css
+- carousel.css
+- atributos.css
+- tags-criadas.css
+- foto de estrutura do site
+- reboot
+
+base ou skeleton
+Padrões e Reset
+Tipografia e Cores
+Estrutura : aqui colocamos os estilos referentes à estrutura e layout do site.
+formulario e tabela
+Classes de uso geral
+
+nav
+main
+article
+aside
+footer
+boa pratica de responsividade
+ use a unidade em para media queries 
+ resolução de celulares 
+ evite tamanhos fixos
+ use a unidade em para media queries
+ escola max ou min
+
+Layouts fixo
+
+px
+
+layouts flexivel
+
+%
+auto
+vh
+vw
+
+ texto fixo
+px
+
+ texto flexivel
+
+
+ ver depois
+sitemap.xml e a altura do .grid
+robots.txt
+
+cuidado ao definir como vw
+
+*/
+
+
+:root {
+		--cor1:blue ;
+		--cor2:black ;
+		--cor3:yellow ;
+		--cor5:#F0F8FF ;
+		--cor6:pink ;
+		--cinza:rgb(255,255,255) ;
+		--white2:rgba(250,250,250,1) ;
+
+}
+
+
+
+
+
+
+
+/*----------------------------------- skeleton ------------------------------ */
+
+* {
+	margin: 0 ;
+	padding: 0 ;
+	border:0px transparent solid ;
+	outline:0px red solid ;/* não conta como espaço */
+
+}
+
+html {
+		scroll-behavior: smooth ;
+		overflow-x:hidden;
+}
+
+body {
+		background-color:var(--white2) ;
+		width:100% ;
+		height:100% ;
+		font-family:arial ;
+		color: #333 ;
+
+}
+
+a {
+		text-decoration: none ;
+		color:black;
+
+
+}
+
+
+h1 {
+	text-align: center ;
+	margin: 20px 0 0 0 ;
+	font-size: 1.25em ;
+	font-weight: normal ;
+
+
+}
+
+
+
+.m-10 {
+	margin-top:25px ;
+
+
+}
+
+button {
+	margin-bottom: 10px
+
+
+}
+/*---------------base-------------------*/
+
+
+
+
+
+.grid {
+	width: 100%;
+	display: grid ;
+	grid-template-rows:48px 392px ;
+
+}
+
+
+.skin {
+ 	background-color: var(--white2) ;
+}
+
+
+
+.grid .item-grid-1 {
+ 	display:flex ;
+ 	flex-flow: row ;
+    justify-content: space-between ;
+    font-size:1.2em ;
+	border-bottom:2px red solid ;
+    align-items: center ;
+
+}
+
+.item-grid-1 .button {
+	transform:translateX(10px) ; 
+	width:20px ;
+	height:20px ;
+	display:grid ;
+	grid-gap:5.5px ;
+
+}
+
+.item-grid-1 .button > div{
+	background-color:var(--cor2) ;
+
+}
+
+.item-grid-1 .button:hover {
+	border:10px white solid ;
+	box-sizing: border-box ;
+}
+
+
+#sign-in{
+	transform:translateX(-15px);
+}
+
+.grid .img {
+	background:url(https://cdn.dribbble.com/assets/art-banners/romainbriaux-284c5096f64764a70b44faa03268b263c4b37365e988446318005ff367ced170.webp);
+	background-repeat: no-repeat ;
+	background-position: center ;
+	background-size:87% ;
+	display: grid ; 
+	align-items: end ;
+	justify-content: center ;
+
+}
+
+.grid .img  p {
+	display: block ;
+	transform: translateY(-10px) ; 
+}
+
+.img p a {
+
+	text-decoration: underline ;
+}
+
+.item-grid-3 {
+
+	display: flex ;
+	flex-flow: column  ;
+	align-items: center ;
+	padding-bottom: 10px ;
+
+}
+
+.item-grid-3 > p:nth-child(1){
+	font-size: 30px ;
+	text-align: center ;
+	width: 90% ;
+}
+
+.item-grid-3 > p:nth-child(2){
+	font-size: 15px ;
+	text-align: center ;
+	width:80% ;
+
+}
+
+.grid-mid {
+
+	display:grid ;
+	margin-top: 20px ;
+	height:400px ;
+	background-color:var(--white2) ;
+	padding-top: 10px ;
+	grid-template-columns:1fr;
+	grid-template-rows:1fr ;
+  
+	
+}
+
+#pop {
+	background-color: red ;
+	grid-column: 1 ;
+	transform:translateX(-20px);
+
+}
+
+#fil {
+	grid-column: 2 ;
+	transform:translateX(30px) ;
+    text-align: right;
+}
+
+#table {
+
+}
